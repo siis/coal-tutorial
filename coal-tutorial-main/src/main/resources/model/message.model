@@ -1,0 +1,37 @@
+class edu.psu.cse.siis.coal.tuto.Message {
+  String target;
+  String strings;
+  String integers;
+  String dataType;
+
+  mod <edu.psu.cse.siis.coal.tuto.Message: void setTarget(java.lang.String)> {
+    0: replace target;
+  }
+
+  mod <edu.psu.cse.siis.coal.tuto.Message: void setDataAndType(edu.psu.cse.siis.coal.tuto.Data,java.lang.String)> {
+    0: replace strings, type edu.psu.cse.siis.coal.tuto.Data:strings;
+    0: replace integers, type edu.psu.cse.siis.coal.tuto.Data:integers;
+    1: replace dataType;
+  }
+
+  mod <edu.psu.cse.siis.coal.tuto.Message: void setType(java.lang.String)> {
+    0: clear strings;
+    0: clear integers;
+    0: replace dataType;
+  }
+
+  mod <edu.psu.cse.siis.coal.tuto.Message: void setData(edu.psu.cse.siis.coal.tuto.Data)> {
+    0: replace strings, type edu.psu.cse.siis.coal.tuto.Data:strings;
+    0: replace integers, type edu.psu.cse.siis.coal.tuto.Data:integers;
+    0: clear dataType;
+  }
+
+  query <edu.psu.cse.siis.coal.tuto.Messaging: void send(edu.psu.cse.siis.coal.tuto.Message)> {
+    0: type edu.psu.cse.siis.coal.tuto.Message;
+  }
+
+  query <edu.psu.cse.siis.coal.tuto.Messaging: void send(edu.psu.cse.siis.coal.tuto.Message,java.lang.String)> {
+    0: type edu.psu.cse.siis.coal.tuto.Message;
+    1: type String;
+  }
+}
