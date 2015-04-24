@@ -29,14 +29,14 @@
   <parent>
     <groupId>edu.psu.cse.siis</groupId>
     <artifactId>coal-tutorial</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
   </parent>
 
   <dependencies>
     <dependency>
       <groupId>edu.psu.cse.siis</groupId>
       <artifactId>coal-tutorial-classpath</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.1.0</version>
   	</dependency>
   </dependencies>
 
