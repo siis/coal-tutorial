@@ -1,6 +1,6 @@
 class edu.psu.cse.siis.coal.tuto.Data {
-  String strings;
-  int integers;
+  Set<String> strings;
+  Set<int> integers;
 
   mod <edu.psu.cse.siis.coal.tuto.Data: void addString(java.lang.String)> {
     0: add strings;
